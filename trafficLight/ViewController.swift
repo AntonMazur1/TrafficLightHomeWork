@@ -8,11 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    var currentTrafficLight = TrafficLights.red
     
     @IBOutlet var views: [UIView]!
     @IBOutlet weak var button: UIButton!
+    
+    private var currentTrafficLight = TrafficLights.red
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +55,12 @@ class ViewController: UIViewController {
             view.alpha = 0.3
         }
     }
-    
+}
+
+
+//MARK: Extension For Traffic Lights
+extension ViewController {
     enum TrafficLights {
         case red, yellow, green
     }
 }
-
